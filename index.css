@@ -6,20 +6,45 @@
 
 body{
   height: 100vh;
-}
-.memory{
-  100
   display:flex;
   justify-content:center;
   align-items:center;
+  background-color:blue;
+}
+
+.memory{
+  height:40rem;
+  width:40rem;
+  display:flex;
+  flex-wrap: wrap;
+  background-color:blue;
+  perspective: 1000px;
 }
 .card{
-  height:300px;
+  height:200px;
   width:150px;
-  border: solid 1px gray;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
   position:relative;
-
+  margin:5px;
+  border-radius:7px;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+.card:active{
+  transform: rotateY(180deg);
 }
 .front-face, .back-face{
+  height:100%;
+  width:100%;
   position:absolute;
+  backface-visibility: hidden;
+  padding:20px;
+  background-color:lightblue;
+  border-radius:7px;
+  border:none;
+}
+.back-face{
+transform:rotateY(180deg);
 }
