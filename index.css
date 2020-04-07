@@ -1,0 +1,25 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+}
+.memory{
+  100
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.card{
+  height:300px;
+  width:150px;
+  border: solid 1px gray;
+  position:relative;
+
+}
+.front-face, .back-face{
+  position:absolute;
+}
