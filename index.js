@@ -1,33 +1,44 @@
-let cards = document.querySelectorAll('.card');
-let flippedCard = true;
-let firstCard = null;
-let secondCard = null;
+  let cards = document.querySelectorAll('.card');
+  let flippedCard = true;
+  let firstCard = null;
+  let secondCard = null;
+  let lockedBoard = true;
 
-for(let i = 0; i < cards.length; i++){
-  cards[i].addEventListener('click', flipCard);
-  function flipCard(){
-    if(flippedCard) {
-      firstCard = cards[i];
-      firstCard.classList.add('flip');
-      flippedCard = false;
-    }else{
-      secondCard = cards[i];
-      secondCard.classList.add('flip');
-      console.log(firstCard.dataset.framework);
-      console.log(secondCard.dataset.framework);
-       setInterval(function(){
-         if(firstCard.dataset.framework === secondCard.dataset.framework){
 
-         }else{
-           firstCard.classList.remove('flip');
-           secondCard.classList.remove('flip');
-         }
-       },1000);
-       flippedCard = true;
+  for(let i = 0; i < cards.length; i++){
+    cards[i].addEventListener('click', flipCard);
+    function flipCard(){
+      if(lockedBoard == false) return;
+      if(flippedCard) {
+        firstCard = cards[i];
+        firstCard.classList.add('flip');
+        flippedCard = false;
+      }else{
+        lockedBoard = false;
+        secondCard = cards[i];
+        secondCard.classList.add('flip');
+          if(secondCard === firstCard){
+            firstCard.classList.remove('flip');
+            secondCard.classList.remove('flip');
+            setTimeout(function(){lockedBoard = true},200);
+          } else if(firstCard.dataset.framework === secondCard.dataset.framework){
+             firstCard.removeEventListener('click', flipCard);
+             secondCard.removeEventListener('click', flipCard);
+             setTimeout(function(){lockedBoard = true},200);
+           }else{
+             setTimeout(function(){
+               firstCard.classList.remove('flip');
+               secondCard.classList.remove('flip');
+               lockedBoard = true;
+             }, 1000);
 
+           }
+
+        flippedCard = true;
+
+
+      }
 
     }
 
-
   }
-}
