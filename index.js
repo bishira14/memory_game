@@ -8,7 +8,7 @@
 
    for(let i = 0; i < cards.length; i++){
      (function(){
-      let random = Math.floor(Math.random()*3)
+      let random = Math.floor(Math.random() * cards.length);
        return cards[i].style.order = random;
      })();
      cards[i].addEventListener('click', flipCard);
