@@ -33,6 +33,7 @@ img{
   border-radius:7px;
   transform-style: preserve-3d;
   transition: 0.3s;
+  cursor:pointer;
 }
 .card:active{
 transform:scale(0.95);
