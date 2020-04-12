@@ -14,11 +14,14 @@
   let showFinish = document.querySelector('.finish');
   let finishScore = document.querySelector('.finishScore');
   let finishTime = document.querySelector('.finishTime');
+  let menu = document.querySelector('.finish .menu');
+  let again = document.querySelector('.finish .again');
 
   setInterval(function(){
       if(win.length == 6) {
         finishScore.innerHTML = score;
         showFinish.style.display = 'flex';
+        finishTime.innerHTML = `Time: ${timerMinutes}:${timerSeconds}`;
         return;
       }
       timerSeconds--;
@@ -48,6 +51,9 @@
 
   },1000);
 
+  again.addEventListener('click', function(){
+    return location.reload();
+  });
 
  function startGame(){
 
