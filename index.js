@@ -50,7 +50,9 @@
     }
 
   },1000);
-
+  menu.addEventListener('click', function(){
+    return window.location.href = "menu.html";
+  });
   again.addEventListener('click', function(){
     return location.reload();
   });

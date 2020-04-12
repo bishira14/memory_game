@@ -26,6 +26,17 @@ background-color: rgb(119, 187, 119);
 padding:5px;
 border-radius: 7px;
 }
+.score_replay{
+  display:flex;
+}
+.replay{
+  width:40px;
+  text-align: center;
+  color:white;
+  background-color: rgb(119, 187, 119);
+  border-radius: 7px;
+  margin-right:5px;
+}
 .finish{
   position:absolute;
   background-color: rgb(119, 187, 119);
@@ -49,7 +60,7 @@ border-radius: 7px;
   border-radius:7px;
   margin:10px;
   color:white;
-  border:solid 1px white;
+  border:solid 1px rgb(77, 153, 77);
   outline:none;
   cursor:pointer;
 }

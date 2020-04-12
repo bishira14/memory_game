@@ -1,0 +1,45 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  background-color:rgb(85, 170, 85);
+  font-family: arial;
+  color:white;
+}
+.stats{
+  height:100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.stats h2{
+  background-color: rgb(119, 187, 119);
+  padding:5px;
+  border-radius: 7px;
+  margin:20px;
+}
+
+.start{
+  height:250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start button{
+  background-color: rgb(51, 102, 51);
+  padding:5px;
+  border-radius: 5px;
+  color:white;
+  font-size: 1.5rem;
+  border:none;
+  margin:17px;
+  outline:none;
+  cursor:pointer;
+}
+.start button:hover{
+  background-color:rgb(34, 68, 34);
+}
