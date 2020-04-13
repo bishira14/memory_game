@@ -39,7 +39,7 @@ border-radius: 7px;
 }
 .finish{
   position:absolute;
-  background-color: rgb(119, 187, 119);
+  background-color: rgb(85, 170, 85);
   height:43rem;
   width:40rem;
   border-radius:15px;
@@ -48,10 +48,11 @@ border-radius: 7px;
   display:none;
 }
 .finish div{
-  background-color:rgb(85, 170, 85);
+  background-color: rgb(68, 136, 68);
   text-align: center;
-  padding:20px;
+  padding:45px;
   border-radius:15px;
+  line-height: 1.5;
 }
 .finish button{
   background-color: rgb(119, 187, 119);
@@ -67,7 +68,6 @@ border-radius: 7px;
 .finish button:hover{
   background-color: rgb(85, 170, 85);
 }
-
 .memory{
   height:40rem;
   width:40rem;
